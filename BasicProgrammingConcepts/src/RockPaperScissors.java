@@ -7,7 +7,6 @@ public class RockPaperScissors {
     }
 
     public static void playGame(){
-        System.out.println("In the playgame");
         int round = 1;
         int userWins =0;
         int compWins = 0;
@@ -16,8 +15,6 @@ public class RockPaperScissors {
 
         System.out.println("How many rounds do you want to play?");
         int numRounds = scan.nextInt();
-
-        System.out.println("Number: "+numRounds);
 
         if(numRounds>=1 && numRounds<=10){
             for(int i=1;i<=numRounds;i++) {
@@ -58,14 +55,13 @@ public class RockPaperScissors {
         }
         else{
             System.out.println("This number of rounds is not allowed!");
+            playGame();
         }
 
         System.out.println("Would you like to play again? 1 for yes and 0 for no");
         int playAgain = scan.nextInt();
 
         if(playAgain == 1){
-            System.out.println("How many rounds do you want to play?");
-            numRounds = scan.nextInt();
             playGame();
         }
         else{
